@@ -102,6 +102,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Link as LinkScroll } from "react-scroll";
 import { menuList, DataType } from "@/utils/fackData/menuList";
+import Link from "next/link";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -143,9 +144,10 @@ const Header = () => {
               <div className="logo">
                 <a href="/">
                   <Image
-                    width={180}
+                    width={40}
                     height={50}
-                    src="/images/logos/logo.png"
+                    src="https://i.ibb.co.com/VpwdTnSt/24-Sep24-Simon-Free-Upload.png"
+                    // src="/images/logos/logo.png"
                     alt="Logo"
                     title="Logo"
                     priority
@@ -193,17 +195,21 @@ const Header = () => {
                     {menuList.map(({ id, label, path, children }) => (
                       <li
                         key={id}
-                        className={`nav-item ${
-                          children ? "dropdown" : ""
-                        } ${openDropdown === id ? "active" : ""}`}
+                        className={`nav-item ${children ? "dropdown" : ""} ${
+                          openDropdown === id ? "active" : ""
+                        }`}
                         onMouseEnter={() =>
-                          !isMobileMenuOpen && children && handleDropdownToggle(id)
+                          !isMobileMenuOpen &&
+                          children &&
+                          handleDropdownToggle(id)
                         }
                         onMouseLeave={() =>
                           !isMobileMenuOpen && children && setOpenDropdown(null)
                         }
                         onClick={() =>
-                          isMobileMenuOpen && children && handleDropdownToggle(id)
+                          isMobileMenuOpen &&
+                          children &&
+                          handleDropdownToggle(id)
                         }
                       >
                         <LinkScroll
@@ -224,7 +230,7 @@ const Header = () => {
                         </LinkScroll>
 
                         {/* Submenu (Dropdown) */}
-                        {children && (
+                        {/* {children && (
                           <ul
                             className={`dropdown-menu ${
                               openDropdown === id ? "show" : ""
@@ -243,6 +249,43 @@ const Header = () => {
                                 >
                                   {child.label}
                                 </LinkScroll>
+                              </li>
+                            ))}
+                          </ul>
+                        )} */}
+                        {/* Submenu (Dropdown) */}
+                        {children && (
+                          <ul
+                            className={`dropdown-menu ${
+                              openDropdown === id ? "show" : ""
+                            }`}
+                            style={{
+                              position: "absolute",
+                              top: "100%",
+                              left: 0,
+                              display: openDropdown === id ? "block" : "none",
+                              backgroundColor: "#fff",
+                              zIndex: 1000,
+                              minWidth: "180px",
+                              padding: "10px 0",
+                              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                              borderRadius: "0.25rem",
+                            }}
+                          >
+                            {children.map((child) => (
+                              <li key={child.id}>
+                                <Link
+                                  href={child.path}
+                                  className="dropdown-item"
+                                  // smooth={true}
+                                  // to={child.path}
+                                  onClick={() => {
+                                    setIsMobileMenuOpen(false);
+                                    setOpenDropdown(null);
+                                  }}
+                                >
+                                  {child.label}
+                                </Link>
                               </li>
                             ))}
                           </ul>
