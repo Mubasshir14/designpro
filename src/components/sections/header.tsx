@@ -256,7 +256,7 @@ const Header = () => {
                         {/* Submenu (Dropdown) */}
                         {children && (
                           <ul
-                            className={`dropdown-menu ${
+                            className={`dropdown-menu rounded-start ${
                               openDropdown === id ? "show" : ""
                             }`}
                             style={{
@@ -276,7 +276,7 @@ const Header = () => {
                               <li key={child.id}>
                                 <Link
                                   href={child.path}
-                                  className="dropdown-item"
+                                  className="dropdown-item  text-dark"
                                   // smooth={true}
                                   // to={child.path}
                                   onClick={() => {
