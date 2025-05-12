@@ -1,10 +1,9 @@
-import React from "react";
+import Hero from "@/components/wordpress/hero";
+import Projects from "@/components/wordpress/projects";
 import Head from "next/head";
-import About from "@/components/sections/about";
-import Hero from "@/components/graphics/hero";
-import Projects from "@/components/graphics/projects";
+import React from "react";
 
-const GraphicsPage = () => {
+const WordpressPage = () => {
   return (
     <>
       <Head>
@@ -18,11 +17,11 @@ const GraphicsPage = () => {
         className="container"
         // style={{ paddingTop: "100px", paddingBottom: "60px" }}
       >
-       <Hero/>
-       <Projects/>
+        <Hero />
+        <Projects />
       </div>
     </>
   );
 };
 
-export default GraphicsPage;
+export default WordpressPage;

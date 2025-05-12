@@ -60,7 +60,9 @@ export const menuList: DataType = [
         children: [
             { id: 21, label: "Graphic Design", path: "/service/graphic-design" },
             { id: 22, label: "Market Design", path: "/service/market-design" },
-            { id: 23, label: "Product Design", path: "/service/product-design" }
+            { id: 23, label: "Product Design", path: "/service/product-design" },
+            { id: 24, label: "Shopify", path: "/service/shopify" },
+            { id: 25, label: "Wordpress", path: "/service/wordpress" }
         ]
     },
     {
