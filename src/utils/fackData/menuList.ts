@@ -58,11 +58,11 @@ export const menuList: DataType = [
         label: "Services",
         path: "service",
         children: [
-            { id: 21, label: "Graphic Design", path: "/service/graphic-design" },
-            { id: 22, label: "Market Design", path: "/service/market-design" },
-            { id: 23, label: "Product Design", path: "/service/product-design" },
-            { id: 24, label: "Shopify", path: "/service/shopify" },
-            { id: 25, label: "Wordpress", path: "/service/wordpress" }
+            { id: 21, label: "Websites", path: "/service/websites" },
+            { id: 22, label: "Web Design", path: "/service/web-design" },
+            { id: 23, label: "SEO", path: "/service/seo" },
+            { id: 24, label: "Ecommerce Store", path: "/service/ecommerce-store" },
+            // { id: 25, label: "Wordpress", path: "/service/wordpress" }
         ]
     },
     {

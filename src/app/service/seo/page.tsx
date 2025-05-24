@@ -1,10 +1,9 @@
-import React from "react";
+import Hero from "@/components/seo/hero";
+import Projects from "@/components/seo/projects";
 import Head from "next/head";
-import About from "@/components/sections/about";
-import Hero from "@/components/graphics/hero";
-import Projects from "@/components/graphics/projects";
+import React from "react";
 
-const GraphicsPage = () => {
+const SEOPage = () => {
   return (
     <>
       <Head>
@@ -18,11 +17,11 @@ const GraphicsPage = () => {
         className="container"
         // style={{ paddingTop: "100px", paddingBottom: "60px" }}
       >
-       <Hero/>
-       <Projects/>
+        <Hero />
+        <Projects />
       </div>
     </>
   );
 };
 
-export default GraphicsPage;
+export default SEOPage;

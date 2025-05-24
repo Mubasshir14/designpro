@@ -19,7 +19,7 @@ const Services = () => {
                 </div>
                 <div className="row">
                     {
-                        servicesData.map(({ description, id, img, title, path }) =>
+                        servicesData.slice(0,3).map(({ description, id, img, title, path }) =>
                             <Card key={id} description={description} id={id} img={img} path={path} title={title} />
                         )
                     }

@@ -1,8 +1,8 @@
 import Image from "next/image"
 import SectionTitle from "@/components/ui/sectionTitle"
 import SlideUp from "@/utils/animations/slideUp"
-import { servicesData } from "@/utils/fackData/servicesData"
 import Link from "next/link"
+import { ecommerceData } from "@/utils/fackData/servicesData"
 
 const Services = () => {
     return (
@@ -19,7 +19,7 @@ const Services = () => {
                 </div>
                 <div className="row">
                     {
-                        servicesData.map(({ description, id, img, title, path }) =>
+                        ecommerceData.map(({ description, id, img, title, path }) =>
                             <Card key={id} description={description} id={id} img={img} path={path} title={title} />
                         )
                     }

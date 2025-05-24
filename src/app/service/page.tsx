@@ -4,9 +4,8 @@ import SectionTitle from "@/components/ui/sectionTitle";
 import { portfolioData } from "@/utils/fackData/portfolioData";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
-import Link from "next/link";
 
-const Projects = () => {
+const AllServicePages = () => {
   return (
     <div className="projects-area" id="project">
       <div className="container">
@@ -29,18 +28,18 @@ const Projects = () => {
           </div>
         </PhotoProvider>
         <div className="row">
-          <Link href="/service" className="hero-btns text-center">
-            <Link href="/service" className="theme-btn">
+          <div className="hero-btns text-center">
+            <a href="#" className="theme-btn">
               View all works
-            </Link>
-          </Link>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Projects;
+export default AllServicePages;
 
 interface PropsType {
   img: string;

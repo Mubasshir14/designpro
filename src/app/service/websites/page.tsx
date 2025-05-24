@@ -1,9 +1,9 @@
-import Hero from "@/components/shopify/hero";
-import Projects from "@/components/shopify/projects";
-import Head from "next/head";
 import React from "react";
+import Head from "next/head";
+import Hero from "@/components/websites/hero";
+import Projects from "@/components/websites/projects";
 
-const ShopifyPage = () => {
+const WebsitePage = () => {
   return (
     <>
       <Head>
@@ -17,11 +17,11 @@ const ShopifyPage = () => {
         className="container"
         // style={{ paddingTop: "100px", paddingBottom: "60px" }}
       >
-        <Hero />
-        <Projects />
+       <Hero/>
+       <Projects/>
       </div>
     </>
   );
 };
 
-export default ShopifyPage;
+export default WebsitePage;
